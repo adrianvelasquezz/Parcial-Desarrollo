@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PASO · Calzado minimalista</title>
+  <meta name="description" content="Tienda de calzado con tarjetas de producto hechas como Web Component nativo.">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header class="header">
+    <a class="logo" href="#">paso<span>.</span></a>
+    <nav class="nav" aria-label="Principal">
+      <a href="#coleccion">Colección</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+    <button class="cart" id="cart-btn" aria-label="Carrito">
+      Carrito <span class="cart__count" id="cart-count">0</span>
+    </button>
+  </header>
+
+  <main>
+    <section class="hero">
+      <p class="hero__tag">Nueva colección 2026</p>
+      <h1>Camina ligero.<br>Vístete simple.</h1>
+      <p class="hero__sub">Calzado esencial, colores con carácter y nada de ruido.</p>
+      <a class="btn" href="#coleccion">Ver colección</a>
+    </section>
+
+    <section id="coleccion" class="section">
+      <h2>Colección</h2>
+      <div class="grid" id="grid"></div>
+    </section>
+  </main>
+
+  <footer id="contacto" class="footer">
+    <p><strong>paso.</strong> · Proyecto académico · Introducción al Front-end</p>
+    <p>Hecho con HTML, CSS y JavaScript vanilla.</p>
+  </footer>
+
+  <dialog id="detalle" class="dialog">
+    <img id="detalle-img" alt="">
+    <h3 id="detalle-titulo"></h3>
+    <p id="detalle-desc"></p>
+    <p class="dialog__price" id="detalle-precio"></p>
+    <button class="btn btn--ghost" id="detalle-cerrar">Cerrar</button>
+  </dialog>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="js/tarjeta-producto.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
